@@ -780,7 +780,7 @@ ul.social li a {
   }
 
   #templatemo_logo h1 a {
-    opacity: 0;
+    font-size: small;
     filter: alpha(opacity=0);
   }
 }
