@@ -561,6 +561,14 @@ h6 {
 /* ==========================================================================
     Products Styling
    ========================================================================== */
+.product-description {
+  text-align: center;
+  margin: 1em 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #444444;
+  padding-bottom: 1em;
+}
 .product-item {
   margin-bottom: 30px;
 }
