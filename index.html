@@ -26,7 +26,6 @@ https://templatemo.com/tm-401-sprint
     <link rel="stylesheet" href="css/templatemo_misc.css">
     <link rel="stylesheet" href="css/templatemo_style.css">
 
-    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 
 </head>
 <body>
@@ -175,35 +174,25 @@ https://templatemo.com/tm-401-sprint
                 </div>
                 <div class="col-md-offset-2 col-md-8">
 
-                        <img src="images/map.jpg"  style="margin: auto; display: block" alt="map">
+                        <a data-toggle="modal" data-target="#mapModal"><img src="images/map.jpg"  style="margin: auto; display: block" alt="map"></a>
+                        <div class="modal fade" id="mapModal" role="dialog">
+                          <div class="modal-dialog">
+                          
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                              <div class="modal-body">
+                                <img src="images/map.jpg"  style="margin: auto; display: block; width: 100%;" alt="map">
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                              </div>
+                            </div>
+                            
+                          </div>
+                        </div>
+
             
                 </div> <!-- /.col-md-6 -->
-                <script>/*
-                <div class="col-md-6 col-sm-6">
-                    
-                    <div class="row contact-form">
-                    
-                        <fieldset class="col-md-6 col-sm-6">
-                            <input id="name" type="text" name="name" placeholder="Name">
-                        </fieldset>
-                        <fieldset class="col-md-6 col-sm-6">
-                            <input type="email" name="email" id="email" placeholder="Email">
-                        </fieldset>
-                        <fieldset class="col-md-12">
-                            <input type="text" name="subject" id="subject" placeholder="Subject">
-                        </fieldset>
-                        <fieldset class="col-md-12">
-                            <textarea name="comments" id="comments" placeholder="Message"></textarea>
-                        </fieldset>
-                        <fieldset class="col-md-12">
-                            <input type="submit" name="send" value="Send Message" id="submit" class="button">
-                        </fieldset>
-                     
-                    </div> <!-- /.contact-form -->
-                    
-                </div> <!-- /.col-md-6 -->
-                */
-                </script>
             </div> <!-- /.row -->
         </div> <!-- /.container -->
     </div> <!-- /#products -->
@@ -215,22 +204,6 @@ https://templatemo.com/tm-401-sprint
                     <span id="copyright">
                    	Copyright &copy; 2020 <a href="#">Company Name</a> . Design: Template Mo </span>
                 </div>   	
-					<script type="text/javascript">
-					/*
-          <!-- /.col-md-6 -->
-                <div class="col-md-4 col-sm-6">
-                    <ul class="social">
-                        <li><a href="#" class="fa fa-facebook"></a></li>
-                        <li><a href="#" class="fa fa-twitter"></a></li>
-                        <li><a href="#" class="fa fa-instagram"></a></li>
-                        <li><a href="#" class="fa fa-linkedin"></a></li>
-                        <li><a href="#" class="fa fa-rss"></a></li>
-                    </ul>
-                </div> <!-- /.col-md-6 -->
-			
-             <!-- /.row -->
-                */
-				</script>
 			</div>
         </div> <!-- /.container -->
     </div> <!-- /.site-footer -->
@@ -242,6 +215,22 @@ https://templatemo.com/tm-401-sprint
     <script src="js/bootstrap.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
-    <!-- templatemo 401 sprint -->
+    <script>
+    $(document).ready(function(){
+        function alignModal(){
+            var modalDialog = $(this).find(".modal-dialog");
+            
+            // Applying the top margin on modal dialog to align it vertically center
+            modalDialog.css("margin-top", Math.max(0, ($(window).height() - modalDialog.height()) / 2));
+        }
+        // Align modal when it is displayed
+        $(".modal").on("shown.bs.modal", alignModal);
+        
+        // Align modal when user resize the window
+        $(window).on("resize", function(){
+            $(".modal:visible").each(alignModal);
+        });   
+    });
+    </script>
 </body>
 </html>
