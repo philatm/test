@@ -25,8 +25,16 @@ https://templatemo.com/tm-401-sprint
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/templatemo_misc.css">
     <link rel="stylesheet" href="css/templatemo_style.css">
+    <style>
+        .modalimg {
+            width: 100%;
 
-
+        }
+        .modal-body li {
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+    </style>
 </head>
 <body>
     <!--[if lt IE 7]>
@@ -117,29 +125,34 @@ https://templatemo.com/tm-401-sprint
             <div class="row">
                 <div class="col-md-4 col-sm-6">
                     <div class="product-item">
-                        <div class="item-thumb">
-                            <div class="overlay">
-                                <div class="overlay-inner">
-                                    <a href="#nogo" class="view-detail">Закажи Охоту!</a>
-                                </div>
-                            </div> <!-- /.overlay -->
-                            <img src="images/products/product1.jpg" alt="">
-                        </div> <!-- /.item-thumb -->
-                        <h3>Хитрый Лис</h3>
+                        <a data-toggle="modal" data-target="#product1Modal">
+                            <div class="item-thumb">
+                                <div class="overlay">
+                                        <div class="overlay-inner">
+                                            <p class="view-detail">Закажи Охоту!</p>
+                                        </div>
+                                </div> <!-- /.overlay -->
+                                <img src="images/products/product1.jpg" alt="Медведь">
+                            </div>
+                        </a> <!-- /.item-thumb -->
+                        <h3>Бурый медведь</h3>
                         <p>Тут будет какое-нибудь интересное описание, рассказ об этом животном. Можно, конечно, вставить и что-нибудь другое или, вообще отказаться от этого блока</p>
                     </div> <!-- /.product-item -->
                 </div> <!-- /.col-md-3 -->
                 <div class="col-md-4 col-sm-6">
                     <div class="product-item">
-                        <div class="item-thumb">
-                            <div class="overlay">
-                                <div class="overlay-inner">
-                                    <a href="#nogo" class="view-detail">Закажи Охоту!</a>
-                                </div>
-                            </div> <!-- /.overlay -->
-                            <img src="images/products/product2.jpg" alt="">
-                        </div> <!-- /.item-thumb -->
-                        <h3>Мощный Лось</h3>
+                        <a data-toggle="modal" data-target="#product2Modal">
+                            <div class="item-thumb">
+                                <div class="overlay">
+                                    <div class="overlay-inner">
+                                        <p class="view-detail">Закажи Охоту!</p>
+                                    </div>
+                                </div> <!-- /.overlay -->
+                                <img src="images/products/product2.jpg" alt="Лось">
+                        </div> 
+                        </a>
+                        <!-- /.item-thumb -->
+                        <h3>Лось</h3>
                         <p>Тут будет какое-нибудь интересное описание, рассказ об этом животном. Можно, конечно, вставить и что-нибудь другое или, вообще отказаться от этого блока</p>
                     </div> <!-- /.product-item -->
                 </div> <!-- /.col-md-3 -->
@@ -181,7 +194,7 @@ https://templatemo.com/tm-401-sprint
                             <!-- Modal content-->
                             <div class="modal-content">
                               <div class="modal-body">
-                                <img src="images/map.jpg"  style="margin: auto; display: block; width: 100%;" alt="map">
+                                <img src="images/map.jpg"  class="modalimg" alt="map">
                               </div>
                               <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
@@ -207,6 +220,50 @@ https://templatemo.com/tm-401-sprint
 			</div>
         </div> <!-- /.container -->
     </div> <!-- /.site-footer -->
+    <!-- Modals -->
+    <div class="modal fade" id="product1Modal" role="dialog">
+      <div class="modal-dialog">
+      
+        <!-- Modal content-->
+        <div class="modal-content">
+          
+          <div class="modal-body">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h3>Бурый медведь</h3>
+            <p>Сроки охоты на территории Ханты-Мансийского автономного округа – Югры:</p>
+            <ul>
+                <li>Осенний период: с 1 августа по 30 ноября </li>
+                <li>Весенний период: с 12 апреля по 10 июня</li>
+            </ul>
+            <img class="modalimg" src="images/products/product1inner.jpg">
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="modal fade" id="product2Modal" role="dialog">
+      <div class="modal-dialog">
+      
+        <!-- Modal content-->
+        <div class="modal-content">
+          
+          <div class="modal-body">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h3>Лось</h3>
+            <p>Сроки охоты на территории Ханты-Мансийского автономного округа – Югры:</p>
+            <ul>
+                <li>Лось (на реву, взрослые самцы): с 1 сентября по 30 сентября </li>
+                <li>Лось (все половозрастные группы): с 1 октября по 31 декабря</li>
+                <li>Лось (в возрасте до 1 года): с 1 января по 15 января</li>
+            </ul>
+            <img class="modalimg" src="images/products/product2inner.jpg">
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
 
     
     <script src="js/vendor/jquery-1.10.1.min.js"></script>

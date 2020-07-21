@@ -623,6 +623,20 @@ h6 {
   font-size: 16px;
   text-transform: uppercase;
 }
+
+.product-item .item-thumb .overlay .overlay-inner p.view-detail {
+  position: relative;
+  margin-top: 45%;
+  display: block;
+  background: url(../images/active-state.png) no-repeat;
+  background-position: center 20px;
+  padding-bottom: 30px;
+  color: #26b864;
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
 .product-item .item-thumb:hover .overlay {
   opacity: 1;
   filter: alpha(opacity=100);
