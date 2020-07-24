@@ -25,16 +25,7 @@ https://templatemo.com/tm-401-sprint
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/templatemo_misc.css">
     <link rel="stylesheet" href="css/templatemo_style.css">
-    <style>
-        .modalimg {
-            width: 100%;
-
-        }
-        .modal-body li {
-            font-size: 0.95rem;
-            font-weight: 600;
-        }
-    </style>
+    <link rel="stylesheet" href="css/modal.css">
 </head>
 <body>
     <!--[if lt IE 7]>
@@ -338,10 +329,10 @@ https://templatemo.com/tm-401-sprint
                 <li>Осенний период охоты - с 3 субботы августа по 28 (29) февраля</li>
             </ul>
 
-            <h3>Рябчик</h3>
+            <h3>Рябчик — белая куропатка</h3>
             <p>Сроки охоты на территории Ханты-Мансийского автономного округа – Югры:</p>
             <ul>
-                <li>Осенний период охоты- с 3 субботы августа по 31 декабря</li>
+                <li>Осенний период охоты- с 3 субботы августа по 28 (29) февраля</li>
             </ul>
 
             <h3>Тетерев</h3>
@@ -405,22 +396,6 @@ https://templatemo.com/tm-401-sprint
     <script src="js/bootstrap.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
-    <script>
-    $(document).ready(function(){
-        function alignModal(){
-            var modalDialog = $(this).find(".modal-dialog");
-            
-            // Applying the top margin on modal dialog to align it vertically center
-            modalDialog.css("margin-top", Math.max(0, ($(window).height() - modalDialog.height()) / 2));
-        }
-        // Align modal when it is displayed
-        $(".modal").on("shown.bs.modal", alignModal);
-        
-        // Align modal when user resize the window
-        $(window).on("resize", function(){
-            $(".modal:visible").each(alignModal);
-        });   
-    });
-    </script>
+    <script src="js/modal.js"></script>
 </body>
 </html>
